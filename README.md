@@ -1,4 +1,4 @@
-# PSHA using Adaptive Importance Sampling
+# Adaptive Importance Sampling PSHA 
 
 This repository provides Python code to calculate Probabilistic Seismic Hazard Analysis using Adaptive Importance Sampling. Further documentation can be found in the following paper:
 
