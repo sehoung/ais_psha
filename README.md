@@ -2,7 +2,7 @@
 
 This repository provides Python code to calculate Probabilistic Seismic Hazard Analysis using Adaptive Importance Sampling. Further documentation can be found in the following paper:
 
-Houng, S. E., and Ceferino, L. (2024). “Fast Probabilistic Seismic Hazard Analysis through Adaptive Importance Sampling”, https://doi.org/10.31224/3763.
+Houng, S. E., and Ceferino, L. (2025). “Fast Probabilistic Seismic Hazard Analysis through Adaptive Importance Sampling”, https://doi.org/10.31224/3763 (Accepted in BSSA, Jan. 2025).
 
 example_area.py: Solve for PSHA problem of Test 1.11, Site 1 of Hale et al. (2018).
 
