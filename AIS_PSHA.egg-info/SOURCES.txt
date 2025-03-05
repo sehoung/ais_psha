@@ -1,0 +1,7 @@
+README.md
+setup.py
+AIS_PSHA.egg-info/PKG-INFO
+AIS_PSHA.egg-info/SOURCES.txt
+AIS_PSHA.egg-info/dependency_links.txt
+AIS_PSHA.egg-info/requires.txt
+AIS_PSHA.egg-info/top_level.txt

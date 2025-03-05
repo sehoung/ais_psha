@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: AIS-PSHA
+Version: 1.0.0
+Summary: Adaptive Importance Sampling PSHA
+Home-page: https://github.com/sehoung/ais_psha
+Author: SoungEil Houng
+Author-email: shoung@berkeley.edu
+Description-Content-Type: text/markdown
