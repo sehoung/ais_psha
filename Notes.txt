@@ -1,0 +1,24 @@
+## 03/06/2025 ##
+
+## Notes on current version ##
+# "class PointSourceModel" does not work. Use small polygon boundary to approximate the point PointSourceModel
+# Monte Carlo error (COV) estimate is not correct.
+# PMC AIS and VEGAS AIS COV also might be not correct.
+
+## Files on test ##
+misc.py
+calc_psha_singlesource_with_epi.py
+calc_psha_singlesource_medianPCE.py
+calc_psha_singlesource_medianPCE_with_epi.py
+pce.py
+(test)ask14.py
+(test)calc_psha.py
+(test)model_sourceprob.py
+
+## Future Works ##
+# Implement modern GMMs
+# Implement finite rupture (aleatory uncertainty in rupture area, length, and location)
+  - ref_01get_pdfpmf_faultB.py
+  - ref_sample_rupture_from_fault.py
+# wrapper program to run over the multiple sources
+# warpper program to run logic tree

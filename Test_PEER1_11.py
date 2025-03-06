@@ -31,7 +31,7 @@ integ_range = np.array([[0, 10], [-100, 100], [-100, 100], [0, 20]])
 
 ##### Run Hazard #####
 # Run naive MC hazard
-haz, cov = psha.haz(Nhazsmpl = 1_000_000, method="MC")
+haz, cov = psha.haz(Nhazsmpl = 100_000, method="MC")
 df = pd.DataFrame(np.c_[GMi_list, haz, cov*100], columns = ["Target GM (g)", "ExRate (/yr)", "Error (%)"])
 print("Results from naive MC")
 print(df)

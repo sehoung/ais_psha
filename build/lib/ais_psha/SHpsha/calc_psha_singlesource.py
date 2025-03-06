@@ -173,7 +173,10 @@ class PSHA_singlesource:
                     integrands = 1 - norm.cdf(z)
                     
                     Pf = np.mean(integrands)
+                    sigma = np.std(integrands)
+                    #print(Pf, sigma)
                     cov = np.sqrt( (1 - Pf)/(Nhazsmpl*Pf) )
+                    #cov = sigma / Pf
                     Pf_list =  np.append(Pf_list, Pf)
                     cov_list = np.append(cov_list, cov)
                     

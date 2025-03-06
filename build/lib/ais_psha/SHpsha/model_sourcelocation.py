@@ -6,7 +6,7 @@ class PointSourceModel:
         self.loc = np.array(loc)
 
     def pdf(self, X):
-        pdfval = np.ones(X.shape[0])
+        pdfval = np.ones(X.shape[0])/len(X)
         return pdfval
 
     def sample(self, Nsmpl=1):
