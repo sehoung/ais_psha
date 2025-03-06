@@ -4,7 +4,7 @@ This repository provides Python code to calculate Probabilistic Seismic Hazard A
 
 Houng, S. E., and Ceferino, L. (2025). “Fast Probabilistic Seismic Hazard Analysis through Adaptive Importance Sampling”, https://doi.org/10.31224/3763 (Accepted in BSSA, Jan. 2025).
 
-example_area.py: Solve for PSHA problem of Test 1.11, Site 1 of Hale et al. (2018).
+Test_PEER1_11.py: Solve for PSHA problem of Test 1.11, Site 1 of Hale et al. (2018).
 
 ## References
 Houng, S. E., and Ceferino, L. (2025). “Fast Probabilistic Seismic Hazard Analysis through Adaptive Importance Sampling”, https://doi.org/10.31224/3763 (Accepted in BSSA, Jan. 2025).
