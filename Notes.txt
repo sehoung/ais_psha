@@ -2,8 +2,8 @@
 
 ## Notes on current version ##
 # "class PointSourceModel" does not work. Use small polygon boundary to approximate the point PointSourceModel
-# Monte Carlo error (COV) estimate is not correct.
-# PMC AIS and VEGAS AIS COV also might be not correct.
+# Monte Carlo error (COV) estimate is from boot strap resampling (100 times)
+# PMC AIS and VEGAS AIS COV might be not correct.
 
 ## Files on test ##
 misc.py

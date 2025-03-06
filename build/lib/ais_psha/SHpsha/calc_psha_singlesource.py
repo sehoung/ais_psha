@@ -171,11 +171,17 @@ class PSHA_singlesource:
                 for GMi in self.GMi_list:
                     z = (np.log(GMi) - lnmed) / lnsigma
                     integrands = 1 - norm.cdf(z)
-                    
                     Pf = np.mean(integrands)
-                    sigma = np.std(integrands)
-                    #print(Pf, sigma)
-                    cov = np.sqrt( (1 - Pf)/(Nhazsmpl*Pf) )
+
+                    # Assuming integrands, Nhazsmpl, and Pf are defined
+                    bootstrap_samples = np.random.choice(integrands, size=(200, Nhazsmpl), replace=True)
+                    bootstrap_estimates = np.mean(bootstrap_samples, axis=1)
+                    cov = np.std(bootstrap_estimates) / Pf
+
+
+                    #sigma = np.std(integrands)
+                    
+                    #cov = np.sqrt( (1 - Pf)/(Nhazsmpl*Pf) )
                     #cov = sigma / Pf
                     Pf_list =  np.append(Pf_list, Pf)
                     cov_list = np.append(cov_list, cov)
