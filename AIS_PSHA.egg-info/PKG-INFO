@@ -5,4 +5,4 @@ Summary: Adaptive Importance Sampling PSHA
 Home-page: https://github.com/sehoung/ais_psha
 Author: SoungEil Houng
 Author-email: shoung@berkeley.edu
-Description-Content-Type: text/markdown
+License-File: LICENSE

@@ -1,3 +1,4 @@
+LICENSE
 README.md
 setup.py
 AIS_PSHA.egg-info/PKG-INFO
@@ -5,3 +6,30 @@ AIS_PSHA.egg-info/SOURCES.txt
 AIS_PSHA.egg-info/dependency_links.txt
 AIS_PSHA.egg-info/requires.txt
 AIS_PSHA.egg-info/top_level.txt
+ais_psha/__init__.py
+ais_psha/SHpmc/__init__.py
+ais_psha/SHpmc/pmc_gaussian_mixture_v1_0.py
+ais_psha/SHpmc/pmc_normal_v0_1.py
+ais_psha/SHpmc/pmc_normal_v0_2.py
+ais_psha/SHpsha/(not used)model_magnitude.py
+ais_psha/SHpsha/(test)ask14.py
+ais_psha/SHpsha/(test)calc_psha.py
+ais_psha/SHpsha/(test)model_sourceprob.py
+ais_psha/SHpsha/__init__.py
+ais_psha/SHpsha/calc_psha_singlesource.py
+ais_psha/SHpsha/calc_psha_singlesource_medianPCE.py
+ais_psha/SHpsha/calc_psha_singlesource_medianPCE_with_epi.py
+ais_psha/SHpsha/calc_psha_singlesource_with_epi.py
+ais_psha/SHpsha/misc.py
+ais_psha/SHpsha/model_epi.py
+ais_psha/SHpsha/model_gmm.py
+ais_psha/SHpsha/model_magnitude_adv.py
+ais_psha/SHpsha/model_magscaling.py
+ais_psha/SHpsha/model_rate.py
+ais_psha/SHpsha/model_sourcelocation.py
+ais_psha/SHpsha/pce.py
+ais_psha/SHpsha/ref_01get_pdfpmf_faultB.py
+ais_psha/SHpsha/ref_sample_rupture_from_fault.py
+ais_psha/SHvegas/__init__.py
+ais_psha/SHvegas/vegas_v2_8.py
+ais_psha/SHvegas/vegas_v2_8_1.py
