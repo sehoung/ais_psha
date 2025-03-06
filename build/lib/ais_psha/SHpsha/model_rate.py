@@ -17,7 +17,7 @@ class FaultEQRate():
             self.fault_coord = fault_coord
             self.Area_km2 = self.fault_area()
 
-        self.Area_cm2 = self.Area_km2*10**12 # convert area to cm2
+        self.Area_cm2 = self.Area_km2*10**10 # convert area to cm2
         
         self.sliprate_mmyr = sliprate
         self.sliprate_cmyr = sliprate * 0.1 # convert mm/yr to cm/yr
