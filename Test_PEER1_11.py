@@ -1,6 +1,6 @@
 from ais_psha.SHpsha import MagProb, PolygonSourceModel, GroundMotionModel, PSHA_singlesource
 import numpy as np
-
+import pandas as pd
 
 ### Define Source and Ground Motion Models ###
 r = 100
@@ -27,14 +27,22 @@ integ_range = np.array([[0, 10], [-100, 100], [-100, 100], [0, 20]])
 
 ##### Run Hazard #####
 # Run naive MC hazard
-haz, cov = psha.haz(Nhazsmpl = 100000, method="MC")
-print(haz, cov)
-
-# Run Population Monte Carlo AIS hazard
-haz, cov = psha.haz(Nhazsmpl = 10000, method="PMC", integ_range = integ_range)
-print(haz, cov)
+haz, cov = psha.haz(Nhazsmpl = 1_000_000, method="MC")
+df = pd.DataFrame(np.c_[GMi_list, haz, cov*100], columns = ["Target GM (g)", "ExRate (/yr)", "Error (%)"])
+print("Results from naive MC")
+print(df)
 
 # Run VEGAS AIS hazard
 haz, cov = psha.haz(Nhazsmpl = 10000, method="vegas", integ_range = integ_range)
-print(haz, cov)
+df = pd.DataFrame(np.c_[GMi_list, haz, cov*100], columns = ["Target GM (g)", "ExRate (/yr)", "Error (%)"])
+print("Results from VEGAS-AIS")
+print(df)
+
+# Run Population Monte Carlo AIS hazard
+haz, cov = psha.haz(Nhazsmpl = 10000, method="PMC", integ_range = integ_range)
+df = pd.DataFrame(np.c_[GMi_list, haz, cov*100], columns = ["Target GM (g)", "ExRate (/yr)", "Error (%)"])
+print("Results from PMC-AIS")
+print(df)
+
+
 ########################
