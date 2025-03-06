@@ -18,7 +18,11 @@ PEER_TEST_1_11 = {
 
 GMi_list = np.array([0.001, 0.01, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.7, 0.8, 0.9, 1])
 
-psha = PSHA_singlesource(PEER_TEST_1_11, site = [0,0,0], GMi_list = GMi_list)
+site1 = [0,0,0]
+site2 = [-50, 0, 0]
+site3 = [-100, 0, 0]
+site4 = [-125, 0, 0]         
+psha = PSHA_singlesource(PEER_TEST_1_11, site = site1, GMi_list = GMi_list)
 ###############################################
 
 # Define integration range for AIS (magnitude, x coordinate, y coordintae, and z coordinate) 
