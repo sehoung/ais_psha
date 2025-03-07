@@ -164,6 +164,8 @@ class PSHA_singlesource:
 
         Pf_list = np.array([])
         cov_list = np.array([])
+        Nsmpl_list = np.array([])
+        Niter_list = np.array([])
         match method:
             case 'MC':
                 x = self.sample(Nsmpl=Nhazsmpl)
@@ -185,6 +187,8 @@ class PSHA_singlesource:
                     #cov = sigma / Pf
                     Pf_list =  np.append(Pf_list, Pf)
                     cov_list = np.append(cov_list, cov)
+                    Nsmpl_list = np.append(Nsmpl_list, Nhazsmpl)
+                    Niter_list = np.append(Niter_list, 1)
                     
             case 'PMC':
                 from ais_psha.SHpmc import Run_pmc_normal_integ3
@@ -194,6 +198,8 @@ class PSHA_singlesource:
                     cov = out.COV
                     Pf_list =  np.append(Pf_list, Pf)
                     cov_list = np.append(cov_list, cov)
+                    Nsmpl_list = np.append(Nsmpl_list, Nhazsmpl)
+                    Niter_list = np.append(Niter_list, out.Niter)
 
             case 'vegas':
                 from ais_psha.SHvegas import Run_vegas_integ
@@ -206,10 +212,12 @@ class PSHA_singlesource:
                     cov = out.COV[-1]
                     Pf_list =  np.append(Pf_list, Pf)
                     cov_list = np.append(cov_list, cov)
+                    Nsmpl_list = np.append(Nsmpl_list, Nhazsmpl)
+                    Niter_list = np.append(Niter_list, out.Kopt)
         
         
         hazard_list = Pf_list*self.rate_tot
-        return hazard_list, cov_list
+        return hazard_list, cov_list, Nsmpl_list, Niter_list
     
     def integrand_no_eps(self, x, GMi=0.001):
         fX = self.pdf(x)
